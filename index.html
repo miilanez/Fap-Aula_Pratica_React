@@ -25,14 +25,15 @@
 
             render() {
                 return (
-                    <div>
+                    <div class="container">
                         <h1>Consulta de Endereço pelo CEP</h1>
+                        <label for="cep">Digite o CEP:</label>
+                        <input type="text" id="cep" placeholder="Ex: 01001000" maxlength="8" />
+                        <button type="button" onClick={consultarCEP}>Buscar Endereço</button>
+                        <div id="result" class="result"></div>
                     </div>
                 );
             }
-
-
-
         }
 
         // Renderizando o componente React no DOM
