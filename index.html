@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de CEP</title>
+    <!-- Carregando o React via CDN -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Consulta de Endereço pelo CEP</h1>
-        <label for="cep">Digite o CEP:</label>
-        <input type="text" id="cep" placeholder="Ex: 01001000" maxlength="8">
-        <button onclick="consultarCEP()">Buscar Endereço</button>
-        <div id="result" class="result"></div>
-    </div>
+    <!-- Elemento onde o React irá renderizar o componente -->
+    <div id="root"></div>
+
     <script src="javascript.js"></script>
+
+    <script type="text/babel">
+
+        class App extends React.Component {
+
+            render() {
+                return (
+                    <div>
+                        <h1>Consulta de Endereço pelo CEP</h1>
+                    </div>
+                );
+            }
+
+
+
+        }
+
+        // Renderizando o componente React no DOM
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
 </body>
+
 </html>
